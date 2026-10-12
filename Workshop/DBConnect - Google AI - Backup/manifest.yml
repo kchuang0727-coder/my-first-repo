@@ -1,0 +1,13 @@
+---
+applications:
+- name: my-python-hana-app
+  path: .
+  memory: 256M
+  disk_quota: 256M
+  buildpacks:
+    - python_buildpack
+  command: python app.py 
+  services:
+    - my_hana_db_hdi # 請記得改成您在 BTP 上的 HANA 實例名稱
+
+
